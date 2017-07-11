@@ -4,10 +4,8 @@ import {users} from '../config/data';
 
 import {Card, FormInput, Button, List, ListItem} from 'react-native-elements'
 
-export default class AddStaff extends Component {
-    onAdd = () => {
-        this.props.navigation.goBack();
-    };
+export default class AddInventory extends Component {
+    onAdd = () => {};
     render() {
 
         return (

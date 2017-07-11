@@ -16,18 +16,29 @@ export const menu = {
         "icon": "list"
     }
 };
+export const manager = {
+    "business": {
+        "id": "cj4s855tj94p60197bu2eodb6",
+        "name": "Tony's"
+    },
+    "name": "kharioki",
+    "email": "kharioki@tony.com",
+    "branch": {
+        "id": "cj4sh9yhm9uu60151ppysc537",
+        "location": "Osu",
+        "_staffMeta": {
+            "count": 2
+        }
+    },
+    "id": "cj4s86mme94sb0197df4nqni9",
+    "profilePicture": "https://randomuser.me/api/portraits/med/men/12.jpg"
+};
 export const me = {
     "gender": "male",
-    "name": {
-        "title": "mr",
-        "first": "lance",
-        "last": "thomas"
-    },
-    "location": {
-        "street": "6942 first street",
-        "city": "elk grove",
-        "state": "new hampshire",
-        "postcode": 30411
+    "name": "Tonys restaurant",
+    "address": {
+        "location": "east legon",
+        "city": "accra"
     },
     "email": "lance.thomas@example.com",
     "login": {
@@ -54,9 +65,118 @@ export const me = {
     "nat": "US"
 };
 export const restaurant = {
-    "business": "tonies",
-    "email": "lance.thomas@example.com"
-}
+    "gender": "male",
+    "name": "Tonys restaurant",
+    "address": {
+        "location": "east legon",
+        "city": "accra"
+    },
+    "email": "lance.thomas@example.com",
+    "login": {
+        "username": "organicmouse687",
+        "password": "frodo1",
+        "salt": "0cSpyp70",
+        "md5": "bf758d9c79ef3c8a2c3fd900fb0c3148",
+        "sha1": "4f28fcd2d5e5ae5e0ff55b7528841e350cabf9fb",
+        "sha256": "1d44ef3ad01dafe929c56021498d8a6d89b2c438bd3f6a07de777ed35b98b5e1"
+    },
+    "dob": "1969-12-14 07:28:16",
+    "registered": "2010-08-09 13:37:38",
+    "phone": "(589)-070-0928",
+    "cell": "(110)-065-6280",
+    "id": {
+        "name": "SSN",
+        "value": "408-64-0336"
+    },
+    "picture": {
+        "large": "https://randomuser.me/api/portraits/men/2.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/2.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/2.jpg"
+    },
+    "nat": "US"
+};
+export const order = [12345678 : {
+        "date": "2017-07-10 08:51:40",
+        "items": [
+            {
+                "name": "me"
+            }
+        ],
+        "supplier": "Julius",
+        "isApproved": true
+    }
+];
+export const items = [
+    {
+        "name": "rice",
+        "quantity": 100,
+        "minQuantity": 15,
+        "id": "cj4s88gqq923v01510ts3asjm",
+        "unit": "Kilos",
+        "unitPrice": 4.5
+    }, {
+        "name": "cooking oil",
+        "quantity": 100,
+        "minQuantity": 20,
+        "id": "cj4s89afz94w90197tvoe3dvr",
+        "unit": "Litres",
+        "unitPrice": 3.6
+    }, {
+        "name": "Apples",
+        "quantity": 150,
+        "minQuantity": 30,
+        "id": "cj4shl1xv9vjv0151eeo1a2ql",
+        "unit": "units",
+        "unitPrice": 0.8
+    }, {
+        "name": "plantain",
+        "quantity": 500,
+        "minQuantity": 100,
+        "id": "cj4shn9d49z83019746bg2qoz",
+        "unit": "fingers",
+        "unitPrice": 1.3
+    }
+];
+export const employees = [
+    {
+        "name": "kharioki",
+        "phoneNumber": "123456789",
+        "email": "kharioki@tony.com",
+        "profilePicture": "https://randomuser.me/api/portraits/med/men/12.jpg",
+        "id": "cj4s86mme94sb0197df4nqni9"
+    }, {
+        "name": "yaw",
+        "phoneNumber": "111222333",
+        "email": "yaw@tony.com",
+        "profilePicture": "https://randomuser.me/api/portraits/med/men/13.jpg",
+        "id": "cj4s87f1292310151nhp6pcaw"
+    }, {
+        "name": "john",
+        "phoneNumber": "01254785",
+        "email": "john@tony.com",
+        "profilePicture": "https://randomuser.me/api/portraits/med/men/14.jpg",
+        "id": "cj4si3zhva0bz01970ke4el7j"
+    }, {
+        "name": "luqman",
+        "phoneNumber": "44444444",
+        "email": "luqman@gmail.com",
+        "profilePicture": "https://randomuser.me/api/portraits/med/men/15.jpg",
+        "id": "cj4si4r89a0cm019747vu5s9z"
+    }, {
+        "name": "kwame",
+        "phoneNumber": "1245786",
+        "email": "kwame@yahoo.com",
+        "profilePicture": "https://randomuser.me/api/portraits/med/men/16.jpg",
+        "id": "cj4si5ise9x7r0151acgpz1ge"
+    }, {
+        "name": "tess",
+        "phoneNumber": "1111000",
+        "email": "tess@tony.com",
+        "profilePicture": "https://randomuser.me/api/portraits/med/men/17.jpg",
+        "id": "cj4si6ola9x970151q2p3z1hl"
+    }
+];
+
 export const users = [
     {
         "gender": "male",

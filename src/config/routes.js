@@ -2,6 +2,8 @@ import React from 'react';
 import {TabNavigator, StackNavigator} from 'react-navigation';
 import {Icon} from 'react-native-elements';
 
+import {ThemeProvider, Toolbar} from 'react-native-material-ui';
+
 import FirstScreen from '../screens/first';
 import Login from '../screens/login';
 import Signup from '../screens/signup';
@@ -20,10 +22,38 @@ export const StaffStack = StackNavigator({
     }
 }, {
     mode: 'modal',
+    modalSize: '50%',
     headerMode: 'none'
 });
 
-export const InventoryStack = StackNavigator({
+export const InventoryStack = TabNavigator({
+    ManageStaff: {
+        screen: StaffStack
+    },
+    Inventory: {
+        screen: Inventory
+    },
+    OrderItems: {
+        screen: OrderItems
+    }
+}, {
+    navigationOptions: {
+        headerLeft: <Icon name="menu" iconStyle={{
+            padding: 20
+        }}/>,
+        headerRight: <Icon name="inbox" iconStyle={{
+                padding: 20
+            }}/>
+    }
+});
+
+export const ManageStack = StackNavigator({
+    Me: {
+        screen: Me
+    },
+    ManageStaff: {
+        screen: InventoryStack
+    },
     Inventory: {
         screen: Inventory
     },
@@ -31,21 +61,6 @@ export const InventoryStack = StackNavigator({
         screen: OrderItems
     }
 }, {headerMode: 'none'});
-
-export const ManageStack = TabNavigator({
-    Me: {
-        screen: Me
-    },
-    ManageStaff: {
-        screen: StaffStack
-    },
-    Inventory: {
-        screen: InventoryStack
-    },
-    OrderItems: {
-        screen: OrderItems
-    }
-});
 
 export const Root = StackNavigator({
     Login: {

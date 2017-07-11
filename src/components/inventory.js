@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollView, View} from 'react-native';
+import {ScrollView, View, TextInput} from 'react-native';
 import {
     Card,
     ButtonGroup,
@@ -8,9 +8,18 @@ import {
     ListItem,
     Icon
 } from 'react-native-elements';
-import {users} from '../config/data';
+import {items} from '../config/data';
 
 export default class Inventory extends Component {
+    static navigationOptions = {
+        title: "Inventory",
+        headerLeft: <Icon name="menu" iconStyle={{
+            padding: 20
+        }}/>,
+        headerRight: <Icon name="inbox" iconStyle={{
+                padding: 20
+            }}/>
+    };
     onOrderItem = () => {
         this.props.navigation.navigate('OrderItems');
     };
@@ -19,7 +28,7 @@ export default class Inventory extends Component {
         return (
             <View>
                 <Card>
-                    <Text>Take inventory:</Text>
+                    <TextInput placeholder="search for item"/>
                 </Card>
                 <Text style={{
                     paddingLeft: 20
@@ -28,9 +37,7 @@ export default class Inventory extends Component {
                 <Card>
                     <ScrollView>
                         <List>
-                            {users.map((user) => (<ListItem key={user.login.username} roundAvatar avatar={{
-                                uri: user.picture.thumbnail
-                            }} title={`${user.name.first.toUpperCase()} ${user.name.last.toUpperCase()}`} subtitle={user.email} onPress={() => this.onOrderItem()}/>))}
+                            {items.map((item) => (<ListItem key={item.id} title={`${item.name.toUpperCase()}`} subtitle={item.unitPrice} onPress={() => this.onOrderItem()}/>))}
                         </List>
                     </ScrollView>
                 </Card>

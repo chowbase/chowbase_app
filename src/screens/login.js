@@ -7,11 +7,15 @@ import {
     Button,
     Tile,
     Header,
-    Card
+    Card,
+    Icon
 } from 'react-native-elements';
 import {users} from '../config/data';
 
 export default class Login extends Component {
+    static navigationOptions = {
+        title: "chowbase"
+    };
     onLogin = () => {
         this.props.navigation.navigate('Me',);
     };

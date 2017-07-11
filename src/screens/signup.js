@@ -1,8 +1,21 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, ScrollView, View} from 'react-native';
-import {Form, FormLabel, FormInput, Button, Card} from 'react-native-elements'
+import {
+    Form,
+    FormLabel,
+    FormInput,
+    Button,
+    Card,
+    Icon
+} from 'react-native-elements'
 
 export default class Signup extends Component {
+    static navigationOptions = {
+        title: "Register",
+        headerRight: <Icon name="info" iconStyle={{
+                padding: 20
+            }}/>
+    };
     onRegister = () => {
         this.props.navigation.navigate('Me',);
     };

@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
 import {ScrollView} from 'react-native';
-import {Tile, List, ListItem, Button} from 'react-native-elements';
-import {me} from '../config/data';
+import {Tile, List, ListItem, Button, Icon} from 'react-native-elements';
+import {manager} from '../config/data';
 
 class Me extends Component {
+    static navigationOptions = {
+        title: "chowbase",
+        headerRight: <Icon name="inbox" iconStyle={{
+                padding: 20
+            }}/>
+    };
+
     handleSettingsPress = () => {
         this.props.navigation.navigate('ManageStaff')
     };
@@ -21,8 +28,8 @@ class Me extends Component {
         return (
             <ScrollView>
                 <Tile imageSrc={{
-                    uri: this.props.picture.medium
-                }} featured title={`${this.props.name.first.toUpperCase()} ${this.props.name.last.toUpperCase()}`} caption={this.props.email}/>
+                    uri: this.props.profilePicture
+                }} featured title={`${this.props.business.name.toUpperCase()}, ${this.props.branch.location.toUpperCase()}`} caption={` Manager: ${this.props.name}, Staff(${this.props.branch._staffMeta.count})`}/>
 
                 <Button rounded title="Add branch" buttonStyle={{
                     marginTop: 20,
@@ -48,7 +55,7 @@ class Me extends Component {
 }
 
 Me.defaultProps = {
-    ...me
+    ...manager
 };
 
 export default Me;
